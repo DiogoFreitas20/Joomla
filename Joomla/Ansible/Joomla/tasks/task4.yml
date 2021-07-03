@@ -1,0 +1,3 @@
+---
+    - name: copy script
+      copy: src=script.sh dest=/home/ubuntu/script.sh

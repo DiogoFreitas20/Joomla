@@ -1,0 +1,34 @@
+---
+- include: task1.yml
+  when: incluir_task1
+
+- include: task2.yml
+  when: incluir_task2
+
+- include: task3.yml
+  when: incluir_task3
+
+- include: task4.yml
+  when: incluir_task4
+
+- include: task4.yml
+  when: incluir_task4
+
+- include: task5.yml
+  when: incluir_task5
+
+- include: task6.yml
+  when: incluir_task6
+
+- include: task7.yml
+  when: incluir_task7
+
+- include: task8.yml
+  when: incluir_task8
+
+- include: task9.yml
+  when: incluir_task9
+
+- include: task10.yml
+  when: incluir_task10
+# tasks file for joomla

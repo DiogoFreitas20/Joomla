@@ -1,0 +1,25 @@
+#Configurar o SSh para login automático sem utilizador
+cd .ssh/
+
+#Criar ficheiro e copiar a nossa chave key.pem para id_rsa
+nano id_rsa
+
+#Dar respetivas permissões
+chmod 400 id_rsa
+
+Copiar as authorized_keys para id_rsa.pub
+nano id_rsa.pub
+
+#Dar respetivas permissões
+chmod 400 id_rsa.pub
+
+#Dar login para qualquer IP sem ser necessário dar "yes"
+nano /etc/ssh/ssh_config
+
+Alterar [Host *.*.*.*]
+No final do mesmo adicionar
+   				StrictHostKeyChecking no
+   				UserKnownHostsFile=/dev/null
+   
+#Por fim, executar o seguinte comando:
+openssl pkey -in key.pem -out id_rsa
